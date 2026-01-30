@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* ========================================
+   Clean Investrust Design System
+   Light, Spacious, Modern
+   ======================================== */
+
+:root {
+  /* Brand Palette */
+  --color-primary: #18181B;
+  /* Jet Black for Primary Actions */
+  --color-accent: #10B981;
+  /* Soft Green for Success/Charts */
+
+  /* Backgrounds */
+  --color-bg: #FAFAFA;
+  /* Off-white page background */
+  --color-surface: #FFFFFF;
+  /* Pure white cards */
+  --color-surface-dark: #18181B;
+  /* Black cards */
+
+  /* Text */
+  --color-text: #18181B;
+  /* Main Text */
+  --color-text-secondary: #71717A;
+  /* Muted Text */
+  --color-text-on-dark: #FFFFFF;
+
+  /* Borders */
+  --color-border: #F4F4F5;
+
+  /* Shadows - Ultra Soft */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.06);
+  --shadow-float: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+  /* Structure */
+  --sidebar-width: 240px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --font-primary: 'Inter', sans-serif;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   Components
+   ======================================== */
+
+/* Cards */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-black {
+  background: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  box-shadow: var(--shadow-float);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  transition: all 0.2s;
+}
+
+.btn-icon:hover {
+  background: #F4F4F5;
+  color: var(--color-text);
+}
+
+/* Sidebar */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  transition: all 0.2s;
+  margin-bottom: 4px;
+}
+
+.sidebar-link:hover {
+  color: var(--color-text);
+  background: #F4F4F5;
+}
+
+.sidebar-link.active {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-hover);
+}
+
+/* Charts */
+.chart-container {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+/* Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive Grid */
+@media (max-width: 1280px) {
+  .layout-grid {
+    grid-template-columns: var(--sidebar-width) 1fr !important;
+  }
+
+  .right-panel {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
