@@ -1,16 +1,92 @@
-# React + Vite
+# Money Manager – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Money Manager is a web application designed to help users manage their personal and business finances in a simple and intuitive way. This frontend application provides a clean dashboard, easy transaction entry, and clear financial insights.
 
-Currently, two official plugins are available:
+The focus of this project is usability, clarity, and real-world finance tracking.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Dashboard view with:
+  - Monthly income and expenditure
+  - Weekly income and expenditure
+  - Yearly income and expenditure
+- Add income and expenses using a popup modal
+  - Separate tabs for Income and Expense
+- Track transactions with:
+  - Date and time
+  - One-line description
+  - Category (Food, Fuel, Movie, Loan, Medical, etc.)
+- Division-based tracking:
+  - Personal
+  - Office
+- Filter transactions by:
+  - Category
+  - Division (Personal / Office)
+  - Date range (between two selected dates)
+- Edit income or expense entries within 12 hours
+  - Editing is restricted after 12 hours
+- Transaction history view
+- Category-wise summary of expenses
+- Account transfer tracking between accounts
+- Responsive and user-friendly UI
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React.js
+- Tailwind CSS
+- JavaScript
+- REST API integration
+
+---
+
+## Project Structure
+
+src/
+components/     Reusable UI components  
+pages/          Application pages  
+services/       API service files  
+utils/          Helper functions  
+App.js  
+main.jsx  
+
+---
+
+## Installation and Setup
+
+1. Clone the repository  
+   git clone https://github.com/VIJAY-PRASATH-R/money-manager-frontend.git
+
+2. Navigate to the project directory  
+   cd money-manager-frontend
+
+3. Install dependencies  
+   npm install
+
+4. Start the development server  
+   npm run dev
+
+---
+
+## Deployment
+
+- The frontend application is deployed and connected to the backend using REST APIs.
+- All income and expense updates are reflected across the dashboard views.
+
+---
+
+## Notes
+
+- Designed with a focus on simplicity and ease of use
+- Responsive layout suitable for different screen sizes
+- Built as part of a time-bound assessment task
+
+---
+
+## Author
+
+Vijay Prasath R  
+Frontend Developer
