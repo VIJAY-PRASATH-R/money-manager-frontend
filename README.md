@@ -89,4 +89,4 @@ main.jsx
 ## Author
 
 Vijay Prasath R  
-Frontend Developer
+Fullstack Developer
